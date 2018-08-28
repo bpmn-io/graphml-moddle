@@ -8,6 +8,42 @@
 Read and write [GraphML 1.1](http://graphml.graphdrawing.org/) files in NodeJS and the browser.
 
 
+## Usage
+
+Get the library via [npm package](https://www.npmjs.org/package/graphml-moddle). Bundle it for the web using your favorite module bundler.
+
+```javascript
+import GraphmlModdle from 'graphml-moddle';
+
+var moddle = new GraphmlModdle();
+
+var modelXML = ...;
+
+moddle.fromXML(modelXML, function(err, graphml) {
+
+  // read graphs
+  graphml.rootElements; [ { $type: 'graphml:Graph', ... }, ... ]
+  
+  // read extensions
+  graphml.extensions; [ { $type: 'graphml:Key', ... }, ... ]
+  
+  // add a new graph
+  const newGraph = moddle.create('graphml:Graph', { 
+    id: 'myGraph'
+  });
+  
+  graphml.rootElements.push(newGraph);
+  
+  moddle.toXML(graphml, function(err, updatedXML) {
+
+    // updatedXML contains new graph
+
+  });
+
+});
+```
+
+
 ## Resources
 
 * [Issues](./issues)
