@@ -1,6 +1,6 @@
 {
   "name": "graphml-moddle",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A moddle wrapper for GraphML 1.1",
   "scripts": {
     "all": "run-s lint test",
