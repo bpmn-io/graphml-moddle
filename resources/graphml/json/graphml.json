@@ -1,0 +1,163 @@
+{
+  "name": "GraphML",
+  "uri": "http://graphml.graphdrawing.org/xmlns",
+  "prefix": "graphml",
+  "xml": {
+    "tagAlias": "lowerCase"
+  },
+  "associations": [],
+  "types": [
+    {
+      "name": "BaseElement",
+      "isAbstract": true,
+      "properties": [
+        {
+          "name": "id",
+          "isAttr": true,
+          "type": "String",
+          "isId": true
+        }
+      ]
+    },
+    {
+      "name": "RootElement",
+      "isAbstract": true,
+      "superClass": [
+        "BaseElement"
+      ]
+    },
+    {
+      "name": "Graphml",
+      "properties": [
+        {
+          "name": "extensions",
+          "type": "Key",
+          "isMany": true
+        },
+        {
+          "name": "rootElements",
+          "type": "RootElement",
+          "isMany": true
+        }
+      ]
+    },
+    {
+      "name": "Graph",
+      "superClass": [
+        "RootElement"
+      ],
+      "properties": [
+        {
+          "name": "edgedefault",
+          "type": "String",
+          "isAttr": true
+        },
+        {
+          "name": "nodes",
+          "type": "Node",
+          "isMany": true
+        },
+        {
+          "name": "edges",
+          "type": "Edge",
+          "isMany": true
+        }
+      ]
+    },
+    {
+      "name": "Node",
+      "superClass": [
+        "BaseElement"
+      ],
+      "properties": [
+        {
+          "name": "data",
+          "type": "Data",
+          "isMany": true
+        },
+        {
+          "name": "incoming",
+          "type": "Edge",
+          "isVirtual": true,
+          "isMany": true,
+          "isReference": true
+        },
+        {
+          "name": "outgoing",
+          "type": "Edge",
+          "isVirtual": true,
+          "isMany": true,
+          "isReference": true
+        }
+      ]
+    },
+    {
+      "name": "Edge",
+      "superClass": [
+        "BaseElement"
+      ],
+      "properties": [
+        {
+          "name": "data",
+          "type": "Data",
+          "isMany": true
+        },
+        {
+          "name": "source",
+          "isAttr": true,
+          "isReference": true,
+          "type": "Node"
+        },
+        {
+          "name": "target",
+          "isAttr": true,
+          "isReference": true,
+          "type": "Node"
+        }
+      ]
+    },
+    {
+      "name": "Key",
+      "superClass": [
+        "BaseElement"
+      ],
+      "properties": [
+        {
+          "name": "for",
+          "type": "String",
+          "isAttr": true
+        },
+        {
+          "name": "attr.type",
+          "type": "String",
+          "isAttr": true
+        },
+        {
+          "name": "attr.name",
+          "type": "String",
+          "isAttr": true
+        },
+        {
+          "name": "default",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "Data",
+      "properties": [
+        {
+          "name": "key",
+          "type": "String",
+          "isAttr": true
+        },
+        {
+          "name": "value",
+          "type": "String",
+          "isBody": true
+        }
+      ]
+    }
+  ],
+  "emumerations": []
+}
