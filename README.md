@@ -3,6 +3,8 @@
 
 # graphml-moddle
 
+[![Build Status](https://travis-ci.org/bpmn-io/graphml-moddle.svg?branch=master)](https://travis-ci.org/bpmn-io/graphml-moddle)
+
 Read and write [GraphML 1.1](http://graphml.graphdrawing.org/) files in NodeJS and the browser.
 
 
