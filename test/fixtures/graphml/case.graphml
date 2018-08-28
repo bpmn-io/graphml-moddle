@@ -1,0 +1,57 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+  <key id="korioIDEVersion" for="node" attr.type="string" attr.name="korioIDEVersion" />
+  <key id="modelType" for="node" attr.type="string" attr.name="modelType" />
+  <key id="ownerType" for="node" attr.type="string" attr.name="ownerType" />
+  <key id="ownerId" for="node" attr.type="string" attr.name="ownerId" />
+  <key id="ownerName" for="node" attr.type="string" attr.name="ownerName" />
+  <key id="description" for="node" attr.type="string" attr.name="description" />
+  <key id="modelVersion" for="node" attr.type="string" attr.name="modelVersion" />
+  <key id="UUID" for="node" attr.type="string" attr.name="UUID" />
+  <key id="labelV" for="node" attr.type="string" attr.name="labelV" />
+  <key id="labelE" for="edge" attr.type="string" attr.name="labelE" />
+  <key id="name" for="node" attr.type="string" attr.name="name" />
+  <key id="parent" for="node" attr.type="string" attr.name="parent" />
+  <key id="type" for="node" attr.type="string" attr.name="type" />
+  <key id="defaultValue" for="node" attr.type="string" attr.name="defaultValue" />
+  <key id="validation" for="node" attr.type="string" attr.name="validation" />
+  <key id="relationship" for="edge" attr.type="string" attr.name="relationship" />
+  <graph id="Claim_Case_1:1:43" edgedefault="directed">
+    <node id="metainfo">
+      <data key="korioIDEVersion">.5</data>
+      <data key="modelType">resourceModel</data>
+      <data key="ownerType">case</data>
+      <data key="ownerId">Claim_Case_1:1:43</data>
+      <data key="ownerName">whatever</data>
+      <data key="description">some description of the purpose of this model</data>
+      <data key="modelVersion">1</data>
+      <data key="UUID">d505be50-be5b-4cb9-a4b4-39a5e05bdf1d</data>
+    </node>
+    <node id="a936b93a-934c-4bb3-875b-fc1365ceec8b">
+      <data key="labelV">aggregate</data>
+      <data key="name">Claim</data>
+      <data key="parent">Claim_Case_1:1:43</data>
+    </node>
+    <node id="9f3aabfa-7c75-4676-8898-39d7fa1c2ae2">
+      <data key="labelV">field</data>
+      <data key="name">claimType</data>
+      <data key="type">string</data>
+      <data key="defaultValue">Home</data>
+      <data key="validation">some validation string</data>
+    </node>
+    <node id="88187b79-7e3f-489b-914e-5d93ecad6386">
+      <data key="labelV">field</data>
+      <data key="name">policyNumber</data>
+      <data key="type">string</data>
+      <data key="defaultValue"></data>
+      <data key="validation">some othervalidation string</data>
+    </node>
+    <edge id="6700a211-150f-4daf-b638-c96d5f058113" source="a936b93a-934c-4bb3-875b-fc1365ceec8b" target="9f3aabfa-7c75-4676-8898-39d7fa1c2ae2">
+      <data key="labelE">aggregation</data>
+      <data key="relationship">aggregates</data>
+    </edge>
+    <edge id="3706c50d-54fa-4fa5-87a0-2bb72d6d5116" source="a936b93a-934c-4bb3-875b-fc1365ceec8b" target="88187b79-7e3f-489b-914e-5d93ecad6386">
+      <data key="labelE">aggregation</data>
+      <data key="relationship">aggregates</data>
+    </edge>
+  </graph>
+</graphml>

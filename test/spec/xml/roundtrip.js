@@ -53,6 +53,21 @@ describe('graphml-moddle - roundtrip', function() {
 
     });
 
+
+    it('case diagram', function(done) {
+
+      // given
+      fromFile('test/fixtures/graphml/case.graphml', function(err, result) {
+
+        // when
+        toXML(result, { format: true }, function(err, xml) {
+          validate(err, xml, done);
+        });
+
+      });
+
+    });
+
   });
 
 });
