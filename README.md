@@ -22,10 +22,10 @@ var modelXML = ...;
 moddle.fromXML(modelXML, function(err, graphml) {
 
   // read graphs
-  graphml.rootElements; [ { $type: 'graphml:Graph', ... }, ... ]
+  graphml.rootElements; // [ { $type: 'graphml:Graph', ... }, ... ]
   
   // read extensions
-  graphml.extensions; [ { $type: 'graphml:Key', ... }, ... ]
+  graphml.extensions; // [ { $type: 'graphml:Key', ... }, ... ]
   
   // add a new graph
   const newGraph = moddle.create('graphml:Graph', { 
