@@ -1,2 +1,3 @@
-test
-resources/xsd
+test/
+.eslintrc
+.travis.yml
