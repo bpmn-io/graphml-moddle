@@ -3,7 +3,7 @@
 
 # graphml-moddle
 
-[![Build Status](https://travis-ci.org/bpmn-io/graphml-moddle.svg?branch=master)](https://travis-ci.org/bpmn-io/graphml-moddle)
+[![Build Status](https://travis-ci.com/bpmn-io/graphml-moddle.svg?branch=master)](https://travis-ci.com/bpmn-io/graphml-moddle)
 
 Read and write [GraphML 1.1](http://graphml.graphdrawing.org/) files in NodeJS and the browser.
 
@@ -23,17 +23,17 @@ moddle.fromXML(modelXML, function(err, graphml) {
 
   // read graphs
   graphml.rootElements; // [ { $type: 'graphml:Graph', ... }, ... ]
-  
+
   // read extensions
   graphml.extensions; // [ { $type: 'graphml:Key', ... }, ... ]
-  
+
   // add a new graph
-  const newGraph = moddle.create('graphml:Graph', { 
+  const newGraph = moddle.create('graphml:Graph', {
     id: 'myGraph'
   });
-  
+
   graphml.rootElements.push(newGraph);
-  
+
   moddle.toXML(graphml, function(err, updatedXML) {
 
     // updatedXML contains new graph
